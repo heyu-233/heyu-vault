@@ -32,3 +32,7 @@ tags:
 - [ChristianLempa/cheat-sheets](https://github.com/ChristianLempa/cheat-sheets)
 - [SamurAIGPT/llm-wiki-agent](https://github.com/SamurAIGPT/llm-wiki-agent)
 - [khoj-ai/khoj](https://github.com/khoj-ai/khoj)
+
+## Local Setup
+
+- [[../07-CheatSheets/Windows-KB-Environment|Windows Knowledge Base Environment]]
