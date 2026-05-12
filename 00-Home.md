@@ -15,6 +15,32 @@ tags:
 
 这个 vault 是 openEuler/Linux 内核知识体系的事实源。
 
+## Today
+
+如果只是想开始记录，不要纠结分类：
+
+1. 临时想法、网页摘录、未整理材料：写到 [[Inbox/README|Inbox]]。
+2. 今天学了什么、做了什么、卡在哪里：写到 [[Daily/README|Daily]]。
+3. 已经清晰的知识：迁移到 Concepts、Labs、Source Reading、CheatSheets 或 MOCs。
+4. 每周整理一次，把 Daily/Inbox 中有价值的内容提升为正式笔记。
+
+## Main Maps
+
+- [[MOCs/Kernel-MOC|Kernel MOC]]
+- [[MOCs/openEuler-MOC|openEuler MOC]]
+- [[MOCs/Embedded-Linux-MOC|Embedded Linux MOC]]
+- [[MOCs/Rust-MOC|Rust MOC]]
+
+## Templates
+
+- [[Templates/Daily|Daily Template]]
+- [[Templates/Inbox|Inbox Template]]
+- [[Templates/Concept|Concept Template]]
+- [[Templates/Source-Reading|Source Reading Template]]
+- [[Templates/Lab|Lab Template]]
+- [[Templates/Issue|Issue Template]]
+- [[Templates/CheatSheet|CheatSheet Template]]
+
 ## Operating Model
 
 - Notion 负责我要做什么：任务看板、路线图、进度和下一步。
@@ -24,6 +50,7 @@ tags:
 
 ## Start Here
 
+- [[START_HERE|START HERE]]
 - [[01-Roadmap/Kernel-Learning-Roadmap|Kernel Learning Roadmap]]
 - [[03-openEuler/openEuler-Kernel|openEuler Kernel]]
 - [[04-Source-Reading/Kernel-Source-Map|Kernel Source Map]]

@@ -12,6 +12,8 @@ tags:
 
 # PR Template
 
+Canonical template: [[../Templates/PR|PR Template]]
+
 ## What
 
 Describe the change in one or two sentences.

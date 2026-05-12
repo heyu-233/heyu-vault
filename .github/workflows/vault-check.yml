@@ -1,0 +1,23 @@
+name: Vault Check
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Check vault quality
+        run: python tools/check_vault.py
+
+      - name: Verify index generation
+        run: python tools/sync_kb_index.py --check

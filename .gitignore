@@ -9,3 +9,14 @@ desktop.ini
 # Temporary exports
 *.tmp
 *.bak
+*.log
+*.zip
+*.7z
+*.rar
+*.iso
+*.qcow2
+*.vmdk
+
+# Private local material
+Attachments/private/
+indexes/kb-index.json

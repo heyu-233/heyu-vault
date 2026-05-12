@@ -36,3 +36,5 @@ tags:
 ## Local Setup
 
 - [[../07-CheatSheets/Windows-KB-Environment|Windows Knowledge Base Environment]]
+- [[Publishing-Roadmap|Publishing Roadmap]]
+- [[LLM-Indexing|LLM Indexing]]

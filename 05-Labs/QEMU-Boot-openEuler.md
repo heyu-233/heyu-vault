@@ -13,6 +13,8 @@ tags:
 
 # QEMU Boot openEuler
 
+Canonical lab template: [[../Templates/Lab|Lab Template]]
+
 ## Goal
 
 Boot an openEuler kernel or image in QEMU and keep a reproducible command record.

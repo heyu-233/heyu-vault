@@ -12,6 +12,8 @@ tags:
 
 # Issue 标题
 
+Canonical template: [[../Templates/Issue|Issue Template]]
+
 ## Basic Info
 
 - Repo:
