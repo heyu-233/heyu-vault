@@ -128,10 +128,17 @@ def index_file(path: Path, vault: Path) -> dict[str, Any]:
 
 
 def build_index(vault: Path, profile: str) -> list[dict[str, Any]]:
-    files = sorted(
+    files = (
         p for p in vault.rglob("*.md") if p.is_file() and should_index(p, vault, profile)
     )
-    return [index_file(path, vault) for path in files]
+    sorted_files = sorted(
+        files,
+        key=lambda p: (
+            p.relative_to(vault).as_posix().lower(),
+            p.relative_to(vault).as_posix(),
+        ),
+    )
+    return [index_file(path, vault) for path in sorted_files]
 
 
 def markdown_text(index: list[dict[str, Any]], profile: str) -> str:
@@ -177,6 +184,16 @@ def check_markdown_fresh(path: Path, expected: str, profile: str) -> bool:
     if actual == expected:
         return True
     print(f"ERROR: index is stale: {path}")
+    actual_lines = actual.splitlines()
+    expected_lines = expected.splitlines()
+    for idx, (actual_line, expected_line) in enumerate(
+        zip(actual_lines, expected_lines, strict=False), start=1
+    ):
+        if actual_line != expected_line:
+            print(f"First differing line: {idx}")
+            print(f"Actual:   {actual_line}")
+            print(f"Expected: {expected_line}")
+            break
     command = "python .\\tools\\sync_kb_index.py"
     if profile != "all":
         command = f"{command} --profile {profile}"
