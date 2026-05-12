@@ -41,12 +41,14 @@ This repository is an Obsidian-first, Markdown-native knowledge base. It is desi
 ```powershell
 python .\tools\check_vault.py
 python .\tools\sync_kb_index.py
+python .\tools\sync_kb_index.py --profile llm
 ```
 
 The human-readable index is generated at:
 
 ```text
 indexes/kb-index.md
+indexes/llm-index.md
 ```
 
 ## Environment Setup

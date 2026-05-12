@@ -19,4 +19,4 @@ desktop.ini
 
 # Private local material
 Attachments/private/
-indexes/kb-index.json
+indexes/*.json

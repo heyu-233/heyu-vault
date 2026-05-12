@@ -15,11 +15,21 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_VAULT = REPO_ROOT
 DEFAULT_JSON = REPO_ROOT / "indexes" / "kb-index.json"
 DEFAULT_MD = REPO_ROOT / "indexes" / "kb-index.md"
+DEFAULT_LLM_JSON = REPO_ROOT / "indexes" / "llm-index.json"
+DEFAULT_LLM_MD = REPO_ROOT / "indexes" / "llm-index.md"
 
 WIKILINK_RE = re.compile(r"\[\[([^\]|#]+)(?:#[^\]|]+)?(?:\|[^\]]+)?\]\]")
 MDLINK_RE = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
 TAG_RE = re.compile(r"(?<!\w)#([A-Za-z0-9_\-/]+)")
-SKIP_DIRS = {".git", ".obsidian"}
+SKIP_DIRS = {".git", ".obsidian", "indexes"}
+LLM_INCLUDE_DIRS = {
+    "MOCs",
+    "02-Kernel-Concepts",
+    "04-Source-Reading",
+    "05-Labs",
+    "06-Issues-PRs",
+    "07-CheatSheets",
+}
 
 
 def parse_scalar(value: str) -> Any:
@@ -91,9 +101,13 @@ def file_updated_at(path: Path) -> str:
     return dt.isoformat(timespec="seconds")
 
 
-def should_index(path: Path, vault: Path) -> bool:
+def should_index(path: Path, vault: Path, profile: str) -> bool:
     rel_parts = path.relative_to(vault).parts
-    return not any(part in SKIP_DIRS for part in rel_parts)
+    if any(part in SKIP_DIRS for part in rel_parts):
+        return False
+    if profile == "llm":
+        return bool(rel_parts) and rel_parts[0] in LLM_INCLUDE_DIRS
+    return True
 
 
 def index_file(path: Path, vault: Path) -> dict[str, Any]:
@@ -113,12 +127,15 @@ def index_file(path: Path, vault: Path) -> dict[str, Any]:
     }
 
 
-def build_index(vault: Path) -> list[dict[str, Any]]:
-    files = sorted(p for p in vault.rglob("*.md") if p.is_file() and should_index(p, vault))
+def build_index(vault: Path, profile: str) -> list[dict[str, Any]]:
+    files = sorted(
+        p for p in vault.rglob("*.md") if p.is_file() and should_index(p, vault, profile)
+    )
     return [index_file(path, vault) for path in files]
 
 
-def markdown_text(index: list[dict[str, Any]]) -> str:
+def markdown_text(index: list[dict[str, Any]], profile: str) -> str:
+    title = "heyu-vault LLM Index" if profile == "llm" else "heyu-vault Index"
     lines = [
         "---",
         "type: index",
@@ -132,7 +149,7 @@ def markdown_text(index: list[dict[str, Any]]) -> str:
         "  - automation",
         "---",
         "",
-        "# heyu-vault Index",
+        f"# {title}",
         "",
         "| Title | Type | Module | Status | Path | Tags |",
         "| --- | --- | --- | --- | --- | --- |",
@@ -146,32 +163,64 @@ def markdown_text(index: list[dict[str, Any]]) -> str:
     return "\n".join(lines) + "\n"
 
 
+def default_output_paths(profile: str) -> tuple[Path, Path]:
+    if profile == "llm":
+        return DEFAULT_LLM_JSON, DEFAULT_LLM_MD
+    return DEFAULT_JSON, DEFAULT_MD
+
+
+def check_markdown_fresh(path: Path, expected: str, profile: str) -> bool:
+    if not path.exists():
+        print(f"ERROR: index file does not exist: {path}")
+        return False
+    actual = path.read_text(encoding="utf-8")
+    if actual == expected:
+        return True
+    print(f"ERROR: index is stale: {path}")
+    command = "python .\\tools\\sync_kb_index.py"
+    if profile != "all":
+        command = f"{command} --profile {profile}"
+    print(f"Run: {command}")
+    return False
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Index vault Markdown notes.")
     parser.add_argument("--vault", type=Path, default=DEFAULT_VAULT)
-    parser.add_argument("--out-json", type=Path, default=DEFAULT_JSON)
-    parser.add_argument("--out-md", type=Path, default=DEFAULT_MD)
-    parser.add_argument("--check", action="store_true", help="Build index in memory without writing files.")
+    parser.add_argument("--out-json", type=Path)
+    parser.add_argument("--out-md", type=Path)
+    parser.add_argument("--profile", choices=("all", "llm"), default="all")
+    parser.add_argument(
+        "--check",
+        action="store_true",
+        help="Verify the generated Markdown index matches the checked-in index.",
+    )
     args = parser.parse_args()
 
     vault = args.vault.resolve()
     if not vault.exists():
         raise SystemExit(f"vault does not exist: {vault}")
 
-    index = build_index(vault)
-    md = markdown_text(index)
+    default_json, default_md = default_output_paths(args.profile)
+    out_json = args.out_json or default_json
+    out_md = args.out_md or default_md
+
+    index = build_index(vault, args.profile)
+    md = markdown_text(index, args.profile)
     js = json.dumps(index, ensure_ascii=False, indent=2)
 
-    if not args.check:
-        args.out_json.parent.mkdir(parents=True, exist_ok=True)
-        args.out_json.write_text(js, encoding="utf-8")
-        args.out_md.parent.mkdir(parents=True, exist_ok=True)
-        args.out_md.write_text(md, encoding="utf-8")
+    if args.check:
+        print(f"Indexed {len(index)} notes")
+        return 0 if check_markdown_fresh(out_md, md, args.profile) else 1
+
+    out_json.parent.mkdir(parents=True, exist_ok=True)
+    out_json.write_text(js, encoding="utf-8")
+    out_md.parent.mkdir(parents=True, exist_ok=True)
+    out_md.write_text(md, encoding="utf-8")
 
     print(f"Indexed {len(index)} notes")
-    if not args.check:
-        print(f"JSON: {args.out_json}")
-        print(f"Markdown: {args.out_md}")
+    print(f"JSON: {out_json}")
+    print(f"Markdown: {out_md}")
     return 0
 
 

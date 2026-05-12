@@ -21,3 +21,6 @@ jobs:
 
       - name: Verify index generation
         run: python tools/sync_kb_index.py --check
+
+      - name: Verify LLM index generation
+        run: python tools/sync_kb_index.py --profile llm --check

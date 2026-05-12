@@ -10,14 +10,10 @@ tags:
   - automation
 ---
 
-# heyu-vault Index
+# heyu-vault LLM Index
 
 | Title | Type | Module | Status | Path | Tags |
 | --- | --- | --- | --- | --- | --- |
-| openEuler Kernel Lab | index | openeuler | seed | `00-Home.md` | kernel, knowledge-base, openeuler |
-| Kernel Learning Roadmap | concept | openeuler | seed | `01-Roadmap/Kernel-Learning-Roadmap.md` | kernel, roadmap |
-| openEuler Kernel Roadmap | concept | openeuler | seed | `01-Roadmap/openEuler-Kernel-Roadmap.md` | openeuler, roadmap |
-| Weekly Plan | output | openeuler | seed | `01-Roadmap/Weekly-Plan.md` | weekly-plan |
 | Boot | concept | boot | seed | `02-Kernel-Concepts/Boot.md` | boot, kernel |
 | Debugging | concept | debugging | seed | `02-Kernel-Concepts/Debugging.md` | debugging, tracing |
 | Device Driver | concept | driver | seed | `02-Kernel-Concepts/Device-Driver.md` | device-tree, driver |
@@ -26,10 +22,6 @@ tags:
 | Network | concept | network | seed | `02-Kernel-Concepts/Network.md` | network, socket |
 | Scheduler | concept | scheduler | seed | `02-Kernel-Concepts/Scheduler.md` | process, scheduler |
 | Security | concept | security | seed | `02-Kernel-Concepts/Security.md` | kernel, security |
-| Contribution Flow | concept | openeuler | seed | `03-openEuler/Contribution-Flow.md` | atomgit, contribution |
-| openEuler Kernel | concept | openeuler | seed | `03-openEuler/openEuler-Kernel.md` | kernel, openeuler |
-| openEuler Overview | concept | openeuler | seed | `03-openEuler/openEuler-Overview.md` | openeuler |
-| SIG-Kernel | concept | openeuler | seed | `03-openEuler/SIG-Kernel.md` | contribution, sig-kernel |
 | Boot Path | source-reading | boot | seed | `04-Source-Reading/Boot-Path.md` | boot, source-reading |
 | Driver Model Path | source-reading | driver | seed | `04-Source-Reading/Driver-Model-Path.md` | driver, source-reading |
 | Kernel Source Map | source-reading | openeuler | seed | `04-Source-Reading/Kernel-Source-Map.md` | kernel, source-reading |
@@ -49,33 +41,7 @@ tags:
 | Procfs Sysfs | cheatsheet | filesystem | seed | `07-CheatSheets/Procfs-Sysfs.md` | observability, procfs, sysfs |
 | QEMU | cheatsheet | boot | seed | `07-CheatSheets/QEMU.md` | commands, qemu |
 | Windows Knowledge Base Environment | cheatsheet | openeuler | seed | `07-CheatSheets/Windows-KB-Environment.md` | environment, notion, obsidian, scoop, windows |
-| Blog Drafts | output | openeuler | seed | `08-Outputs/Blog-Drafts/README.md` | blog, output |
-| Interview Notes | output | openeuler | seed | `08-Outputs/Interview-Notes.md` | interview |
-| Resume Materials | output | openeuler | seed | `08-Outputs/Resume-Materials.md` | output, resume |
-| Books | cheatsheet | openeuler | seed | `99-Refs/Books.md` | books, refs |
-| Links | cheatsheet | openeuler | seed | `99-Refs/Links.md` | links, refs |
-| LLM Indexing | cheatsheet | openeuler | seed | `99-Refs/LLM-Indexing.md` | indexing, llm, notelm |
-| Notion Dashboard | cheatsheet | openeuler | seed | `99-Refs/Notion-Dashboard.md` | notion, workflow |
-| Papers | cheatsheet | openeuler | seed | `99-Refs/Papers.md` | papers, refs |
-| Publishing Roadmap | cheatsheet | openeuler | seed | `99-Refs/Publishing-Roadmap.md` | digital-garden, publishing |
-| Attachments | index | openeuler | seed | `Attachments/README.md` | attachments, workflow |
-| Daily | index | openeuler | seed | `Daily/README.md` | daily, workflow |
-| Inbox | index | openeuler | seed | `Inbox/README.md` | inbox, workflow |
 | Embedded Linux MOC | index | driver | seed | `MOCs/Embedded-Linux-MOC.md` | embedded-linux, moc |
 | Kernel MOC | index | openeuler | seed | `MOCs/Kernel-MOC.md` | kernel, moc |
 | openEuler MOC | index | openeuler | seed | `MOCs/openEuler-MOC.md` | moc, openeuler |
 | Rust MOC | index | openeuler | seed | `MOCs/Rust-MOC.md` | moc, rust |
-| Private Policy | index | openeuler | seed | `PRIVATE_POLICY.md` | git, privacy, publishing |
-| heyu-vault |  |  |  | `README.md` |  |
-| START HERE | index | openeuler | seed | `START_HERE.md` | obsidian, start, workflow |
-| Blog Draft Title | output |  | seed | `Templates/Blog-Draft.md` | blog |
-| Book Title | output |  | seed | `Templates/Book.md` | book |
-| CheatSheet Title | cheatsheet |  | seed | `Templates/CheatSheet.md` |  |
-| Concept Title | concept |  | seed | `Templates/Concept.md` |  |
-| {{date}} | output |  | seed | `Templates/Daily.md` | daily |
-| Inbox Note | output |  | seed | `Templates/Inbox.md` | inbox |
-| Issue Title | issue |  | seed | `Templates/Issue.md` |  |
-| Lab Title | lab |  | seed | `Templates/Lab.md` |  |
-| Paper Title | output |  | seed | `Templates/Paper.md` | paper |
-| PR Title | pr |  | seed | `Templates/PR.md` |  |
-| Module Source Reading | source-reading |  | seed | `Templates/Source-Reading.md` |  |

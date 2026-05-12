@@ -56,4 +56,11 @@ Generate local index files with:
 python .\tools\sync_kb_index.py
 ```
 
+Generate a smaller LLM-oriented index with:
+
+```powershell
+python .\tools\sync_kb_index.py --profile llm
+```
+
 Use `indexes/kb-index.md` for human review and `indexes/kb-index.json` for tool integration.
+Use `indexes/llm-index.md` when a retrieval tool should avoid `Inbox/`, `Daily/`, templates, attachments, and generated indexes.
