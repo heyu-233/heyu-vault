@@ -10,7 +10,8 @@ This repository is an Obsidian-first, Markdown-native knowledge base. It is desi
 2. Open it as an Obsidian vault.
 3. Start from [START_HERE.md](START_HERE.md) or [00-Home.md](00-Home.md).
 4. Capture rough material in `Inbox/` or `Daily/`.
-5. Promote stable notes into concepts, labs, source reading, MOCs, or cheat sheets.
+5. Put AI-organized candidate notes in `Drafts/`.
+6. Promote stable notes into concepts, labs, source reading, MOCs, or cheat sheets.
 
 ## Operating Model
 
@@ -18,6 +19,7 @@ This repository is an Obsidian-first, Markdown-native knowledge base. It is desi
 - Obsidian stores what was learned.
 - NoteLM/LLMNote indexes selected notes, docs, and source repositories.
 - Codex helps inspect code, draft notes, and prepare contribution documents.
+- `09-AI-Memory/` stores durable AI operating rules, mistakes, decisions, runbooks, and handoff notes.
 
 ## Current Focus
 
@@ -33,6 +35,8 @@ This repository is an Obsidian-first, Markdown-native knowledge base. It is desi
 - [00-Home.md](00-Home.md)
 - [Kernel MOC](MOCs/Kernel-MOC.md)
 - [openEuler MOC](MOCs/openEuler-MOC.md)
+- [AI Operating Rules](09-AI-Memory/AI-Operating-Rules.md)
+- [Workflow Runbook](09-AI-Memory/Workflow-Runbook.md)
 - [Windows Knowledge Base Environment](07-CheatSheets/Windows-KB-Environment.md)
 - [Private Policy](PRIVATE_POLICY.md)
 

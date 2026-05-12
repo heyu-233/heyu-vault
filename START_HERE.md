@@ -21,12 +21,14 @@ This vault is a personal technical knowledge base. It currently focuses on openE
 2. Open [[00-Home|00-Home]].
 3. If you are capturing rough material, write it in [[Inbox/README|Inbox]].
 4. If you are recording today's work, write it in [[Daily/README|Daily]].
-5. If the note is stable, promote it into a concept, lab, source reading note, MOC, or cheat sheet.
+5. If AI has organized raw material, review it in [[Drafts/README|Drafts]].
+6. If the note is stable, promote it into a concept, lab, source reading note, MOC, or cheat sheet.
 
 ## Daily Use
 
 ```text
 Capture -> Daily/Inbox
+Draft -> Drafts
 Clarify -> Templates
 Connect -> MOCs and related notes
 Consolidate -> Concepts/Labs/CheatSheets
@@ -39,11 +41,13 @@ Publish -> Outputs
 | --- | --- |
 | Temporary idea, link, quote | `Inbox/` |
 | Daily work log | `Daily/` |
+| AI-organized candidate note | `Drafts/` |
 | Kernel concept | `02-Kernel-Concepts/` |
 | Code reading | `04-Source-Reading/` |
 | Reproducible experiment | `05-Labs/` |
 | Issue or PR analysis | `06-Issues-PRs/` |
 | Commands and troubleshooting | `07-CheatSheets/` |
+| AI operating memory and handoff notes | `09-AI-Memory/` |
 | Blog/resume/interview material | `08-Outputs/` |
 | Topic navigation | `MOCs/` |
 | Images and small public files | `Attachments/` |

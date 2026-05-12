@@ -52,6 +52,11 @@ tags:
 | Blog Drafts | output | openeuler | seed | `08-Outputs/Blog-Drafts/README.md` | blog, output |
 | Interview Notes | output | openeuler | seed | `08-Outputs/Interview-Notes.md` | interview |
 | Resume Materials | output | openeuler | seed | `08-Outputs/Resume-Materials.md` | output, resume |
+| AI Operating Rules | concept | openeuler | seed | `09-AI-Memory/AI-Operating-Rules.md` | ai-memory, codex, workflow |
+| Codex Handoff Template | output | openeuler | seed | `09-AI-Memory/Codex-Handoff-Template.md` | ai-memory, codex, handoff |
+| Mistakes And Fixes | output | openeuler | seed | `09-AI-Memory/Mistakes-And-Fixes.md` | ai-memory, fixes, mistakes |
+| Project Decisions | output | openeuler | seed | `09-AI-Memory/Project-Decisions.md` | ai-memory, decisions, workflow |
+| Workflow Runbook | cheatsheet | openeuler | seed | `09-AI-Memory/Workflow-Runbook.md` | ai-memory, runbook, workflow |
 | Books | cheatsheet | openeuler | seed | `99-Refs/Books.md` | books, refs |
 | Links | cheatsheet | openeuler | seed | `99-Refs/Links.md` | links, refs |
 | LLM Indexing | cheatsheet | openeuler | seed | `99-Refs/LLM-Indexing.md` | indexing, llm, notelm |
@@ -60,6 +65,7 @@ tags:
 | Publishing Roadmap | cheatsheet | openeuler | seed | `99-Refs/Publishing-Roadmap.md` | digital-garden, publishing |
 | Attachments | index | openeuler | seed | `Attachments/README.md` | attachments, workflow |
 | Daily | index | openeuler | seed | `Daily/README.md` | daily, workflow |
+| Drafts | index | openeuler | seed | `Drafts/README.md` | ai, drafts, workflow |
 | Inbox | index | openeuler | seed | `Inbox/README.md` | inbox, workflow |
 | Embedded Linux MOC | index | driver | seed | `MOCs/Embedded-Linux-MOC.md` | embedded-linux, moc |
 | Kernel MOC | index | openeuler | seed | `MOCs/Kernel-MOC.md` | kernel, moc |

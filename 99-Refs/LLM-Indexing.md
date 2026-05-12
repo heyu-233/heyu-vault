@@ -22,10 +22,11 @@ Index only focused sources:
 3. `04-Source-Reading/`
 4. `05-Labs/`
 5. `07-CheatSheets/`
-6. openEuler kernel repository when cloned
-7. Linux kernel `Documentation/`
-8. openEuler official docs used by current labs
-9. Issue and PR notes created in this vault
+6. `09-AI-Memory/`
+7. openEuler kernel repository when cloned
+8. Linux kernel `Documentation/`
+9. openEuler official docs used by current labs
+10. Issue and PR notes created in this vault
 
 Do not index the whole openEuler organization in the first pass.
 
@@ -33,6 +34,7 @@ Do not index the whole openEuler organization in the first pass.
 
 - Do not index `Inbox/` by default. It contains rough and noisy material.
 - Do not index `Daily/` by default unless a note has been cleaned or promoted.
+- Do not index `Drafts/` by default. Drafts need human review before they become retrieval memory.
 - Do not index `Attachments/private/`.
 - Do not index `.obsidian/`.
 

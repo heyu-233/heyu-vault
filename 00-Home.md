@@ -31,6 +31,15 @@ tags:
 - [[MOCs/Embedded-Linux-MOC|Embedded Linux MOC]]
 - [[MOCs/Rust-MOC|Rust MOC]]
 
+## AI Workflow
+
+- [[Drafts/README|Drafts]]
+- [[09-AI-Memory/AI-Operating-Rules|AI Operating Rules]]
+- [[09-AI-Memory/Mistakes-And-Fixes|Mistakes And Fixes]]
+- [[09-AI-Memory/Project-Decisions|Project Decisions]]
+- [[09-AI-Memory/Workflow-Runbook|Workflow Runbook]]
+- [[09-AI-Memory/Codex-Handoff-Template|Codex Handoff Template]]
+
 ## Templates
 
 - [[Templates/Daily|Daily Template]]

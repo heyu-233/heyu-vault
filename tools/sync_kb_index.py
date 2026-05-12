@@ -29,6 +29,7 @@ LLM_INCLUDE_DIRS = {
     "05-Labs",
     "06-Issues-PRs",
     "07-CheatSheets",
+    "09-AI-Memory",
 }
 
 

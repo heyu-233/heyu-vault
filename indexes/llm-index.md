@@ -41,6 +41,11 @@ tags:
 | Procfs Sysfs | cheatsheet | filesystem | seed | `07-CheatSheets/Procfs-Sysfs.md` | observability, procfs, sysfs |
 | QEMU | cheatsheet | boot | seed | `07-CheatSheets/QEMU.md` | commands, qemu |
 | Windows Knowledge Base Environment | cheatsheet | openeuler | seed | `07-CheatSheets/Windows-KB-Environment.md` | environment, notion, obsidian, scoop, windows |
+| AI Operating Rules | concept | openeuler | seed | `09-AI-Memory/AI-Operating-Rules.md` | ai-memory, codex, workflow |
+| Codex Handoff Template | output | openeuler | seed | `09-AI-Memory/Codex-Handoff-Template.md` | ai-memory, codex, handoff |
+| Mistakes And Fixes | output | openeuler | seed | `09-AI-Memory/Mistakes-And-Fixes.md` | ai-memory, fixes, mistakes |
+| Project Decisions | output | openeuler | seed | `09-AI-Memory/Project-Decisions.md` | ai-memory, decisions, workflow |
+| Workflow Runbook | cheatsheet | openeuler | seed | `09-AI-Memory/Workflow-Runbook.md` | ai-memory, runbook, workflow |
 | Embedded Linux MOC | index | driver | seed | `MOCs/Embedded-Linux-MOC.md` | embedded-linux, moc |
 | Kernel MOC | index | openeuler | seed | `MOCs/Kernel-MOC.md` | kernel, moc |
 | openEuler MOC | index | openeuler | seed | `MOCs/openEuler-MOC.md` | moc, openeuler |
